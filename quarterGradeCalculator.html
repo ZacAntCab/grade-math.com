@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="keywords" content="Quarter Grade, Major Grade, Minor Grade, Calculator">
+        <meta name="author" content="Zachary Cabrera">
+        <meta name="description" content="A website made to help anyone needing help calculating their grades, including final-grades, quarter grades, and GPAs.">
+
+        <title>Quarter Grade Calculator | Grade-Math.com</title>
+        <link rel="icon" type="image/x-icon" href="https://i.postimg.cc/P58q3KjG/Untitled-4.png">
+        <link rel="stylesheet" href="main.css">
+        <script src="script.js" defer></script>
+        <script src="quarterGradeCalculator.js" defer></script>
+    </head>
+    <body>
+        <div class="menu-container">
+            <button class="menu-btn menu-btn-with-header" id="menu-btn">
+                <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="menu-icon" id="menu-icon"><g ><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></g></svg>
+            </button>
+        </div>
+        <div class="header" id="header">
+            <a href="index.html">
+                <img class="logo" id="logo" src="https://i.postimg.cc/P58q3KjG/Untitled-4.png">
+            </a>
+            <h1 class="header-title">grade-math.com</h1>
+            <h2 class="header-subtitle">The Website Created for Nerds Who Care Too Much</h2>
+            <hr class="vertical-bar">
+            <a href="index.html" class="header-link">Home</a>
+            <div class="dropdown" id="calculators-dropdown">
+                <button class="header-btn" id="calculators-btn">Calculators ▼</button>
+                <div class="dropdown-menu" id="dropdown-menu">
+                    <a class="dropdown-link" href="quarterGradeCalculator.html">Quarter Grade Calculator</a>
+                    <a class="dropdown-link" href="finalGradeCalculator.html">Final Grade Calculator</a>
+                    <a class="dropdown-link" href="gpaCalculator.html">GPA Calculator</a>
+                </div>
+            </div>
+            <a href="aboutUs.html" class="header-link">About Us</a>
+        </div>
+    <div class="box" id="page">
+        <form id="quarter-grade-form" class="dialog">
+            <table>
+                <tr>
+                    <td>
+                        <fieldset class="calc-fieldset" id="minors-small-box">
+                            <legend class="legend">Minors</legend>
+                            <table class="amount-grid">
+                                <tr>
+                                    <td>
+                                        <button type="button" class="amount-button" id="remove-button-mi">-</button>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="amount-button" id="add-button-mi">+</button>
+                                    </td>
+                                </tr>
+                            </table>
+                            <div class="table-box">
+                                <table id="table1" class="input-grid"></table>                          
+                            </div>
+                            <dialog id="invalid-number-dialog-minor">
+                                <button type="button" class="exit-dialog-btn" id="exit-btn-1-minor">✕</button>
+                                Grade must be between 0 and 100.
+                            </dialog>
+                            <dialog id="blank-dialog-minor">
+                                <button type="button" class="exit-dialog-btn" id="exit-btn-2-minor">✕</button>
+                                Please input a grade or remove the input box.
+                            </dialog>
+                        </fieldset>
+                    </td>
+                    <td>
+                        <fieldset class="calc-fieldset">
+                            <legend class="legend">Majors</legend>
+                            <table class="amount-grid">
+                                <tr>
+                                    <td>
+                                        <button type="button" class="amount-button" id="remove-button-ma">-</button>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="amount-button" id="add-button-ma">+</button>
+                                    </td>
+                                </tr>
+                            </table>
+                            <div class="table-box">
+                                <table id="table2" class="input-grid"></table>                          
+                            </div>
+                            <dialog id="invalid-number-dialog-major">
+                                <button type="button" class="exit-dialog-btn" id="exit-btn-1-major">✕</button>
+                                Grade must be between 0 and 100.
+                            </dialog>
+                            <dialog id="blank-dialog-major">
+                                <button type="button" class="exit-dialog-btn" id="exit-btn-2-major">✕</button>
+                                Please input a grade or remove the input box.
+                            </dialog>                        
+                        </fieldset>
+                    </td>
+                </tr>
+            </table>
+        </form>
+            <div id="nav-btn-box"></div>
+            <button class="info-btn" id="info-btn">i</button>
+            <dialog id="info">
+                <button type="button" class="exit-dialog-btn" id="exit-info-btn">✕</button>
+                This program uses a 40-60 split on grades, meaning majors are worth 40% of the final grade and minors are worth 60%. This may or may not be how your school grading system works so you might want to check with somebody at your school before taking your grade seriously.
+            </dialog>
+        </div>
+    </body>
+</html>
