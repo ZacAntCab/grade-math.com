@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="target gpa, gpa, gpa you want, how to get the gpa you want, gpa calculator, target gpa calculator">
+        <meta name="description" content="A website designed to make it easy and fast to caluclate anything regarding your school grades.">
+
+        <title>Target GPA Calculator | Grade-Math.com</title>
+        <link rel="icon" type="svg/x-icon" href="gradeMathLogo.svg">
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js" defer></script>
+        <script src="targetGPACalculator.js" defer></script>
+    </head>
+    <body>
+        <nav class="header">
+            <a href="index.html" class="logo-link" aria-label="Home"><img alt="Grade-Math.com Logo" class="logo" src="gradeMathLogo.svg"></a>
+            <h1 class="header-title">grade-math.com</h1>
+            <h2 class="header-subtitle">The Website Created for Nerds Who Care Too Much</h2>
+            <div class="vert-bar-container">
+                <hr class="vertical-bar">
+            </div>
+            <div class="dropdown grade-calculators">
+                <button class="header-btn grade-calculators-btn">Grade Calculators <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M480-360 280-560h400L480-360Z"/></svg></button>
+                <div class="dropdown-menu grade-calculators-menu">
+                    <a class="dropdown-link" tabindex="-1" href="fastGrader.html">Fast Grader</a>
+                    <a class="dropdown-link" tabindex="-1" href="gradeCalculator.html">Grade Calculator</a>
+                    <a class="dropdown-link" tabindex="-1" href="finalGradeCalculator.html">Final Grade Calculator</a>
+                </div>
+            </div>
+            <div class="dropdown gpa-calculators">
+                <button class="header-btn gpa-calculators-btn">GPA Calculators <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M480-360 280-560h400L480-360Z"/></svg></button>
+                <div class="dropdown-menu gpa-calculators-menu">
+                    <a class="dropdown-link" tabindex="-1" href="gpaCalculator.html">GPA Calculator</a>
+                    <a class="dropdown-link" tabindex="-1" href="weightedGPACalculator.html">Weighted GPA Calculator</a>
+                    <a class="dropdown-link" tabindex="-1" href="targetGPACalculator.html">Target GPA Calculator</a>
+                </div>
+            </div>
+            <div class="vert-bar-container">
+                <hr class="vertical-bar">
+            </div>
+            <div class="switch-box">
+                <button aria-label="Dark Mode Switch" id="theme-switch"><div id="theme-switch-inside"><svg xmlns="http://www.w3.org/2000/svg" height="1.1rem" viewBox="0 -960 960 960" width="1.1rem" fill="#333"><path d="M480-360q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Zm0 80q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Zm326-268Z"/></svg></div></button>
+            </div>
+        </nav>
+        <h3>Target GPA Calculator</h3>
+        <form class="labels-form">
+            <div class="input-box">
+                <div class="input-wrapper label-input-wrapper">
+                    <label for="current-gpa">Current GPA</label>
+                    <input id="current-gpa" placeholder="e.g. 3.2" type="number">
+                </div>
+                <div class="input-wrapper label-input-wrapper">
+                    <label for="credits-earned">Total Credits Earned</label>
+                    <input id="credits-earned" placeholder="e.g. 12" type="number">
+                </div>
+                <div class="input-wrapper label-input-wrapper">
+                    <label for="target-gpa">Target GPA</label>
+                    <input id="target-gpa" placeholder="e.g. 3.4" type="number">
+                </div>
+                <div class="input-wrapper label-input-wrapper">
+                    <label for="remaining-credits">Remaining Credits</label>
+                    <input id="remaining-credits" placeholder="e.g. 5" type="number">
+                </div>
+            </div>
+        </form>
+        <h4 style="display: none; margin-top: 3vh; margin-bottom: -3vh;">Highest Possible GPA</h4>
+        <div class="input-wrapper">
+            <div class="final-grade-display">0.00</div>
+            <h3>or</h3>
+            <div class="final-grade-display" id="letter-grade-display">N/A</div>
+        </div>
+        <h3>How It Works</h3>
+        <section class="how-it-works">
+            <p class="brief-explanation">If you've ever been worried about your grades, and what your GPA will be after this semester this calculator is perfect for you. It's an easy and simple way to find what grade you need to keep your GPA up. Here's how it works:</p>
+            <ul>
+                <li>
+                    <div class="step-number">1</div>
+                    <div class="instructions">
+                        <h4>Input Your Current GPA</h4>
+                        <p class="step-instructions">In the first input box labeled "Current GPA", type what your GPA is before the current semester.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="step-number">2</div>
+                    <div class="instructions">
+                        <h4>Enter Your Total Credits Earned</h4>
+                        <p class="step-instructions">In the "Total Credits Earned" box, input the amount of credits you have earned before this semester.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="step-number">3</div>
+                    <div class="instructions">
+                        <h4>Enter Your Target GPA</h4>
+                        <p class="step-instructions">In the third input field, type the GPA you would like to achieve.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="step-number">4</div>
+                    <div class="instructions">
+                        <h4>Enter Your Remaining Credits</h4>
+                        <p class="step-instructions">Enter the total amount of credits your remaining courses are worth.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="step-number">4</div>
+                    <h4>Let the Calculator Do It's Magic</h4>
+                </li>
+            </ul>
+        </section>
+        <h3>How to Calculate Your Grade</h3>
+        <section class="how-it-works">
+            <p class="brief-explanation">Now that you know how to use this calculator, you might want to know how to do these calculations by yourself. Here's how to calculate your needed GPA on your own:</p>
+            <ul>
+                <li>
+                    <div class="step-number">1</div>
+                    <div class="instructions">
+                        <h4>Multiply Your Current GPA by Your Credits Earned</h4>
+                        <p class="step-instructions"><br><b>e.g. &nbsp;3.2 * 12 = 38.4</b></p>
+                    </div>
+                </li>
+                <li>
+                    <div class="step-number">2</div>
+                    <div class="instructions">
+                        <h4>Add Your Credits Earned and Your Remaining Credits</h4>
+                        <p class="step-instructions"><br><b>e.g. &nbsp;12 + 5 = 17</b></p>
+                    </div>
+                </li>
+                <li>
+                    <div class="step-number">3</div>
+                    <div class="instructions">
+                        <h4>Multiply Your Target GPA by Step 2</h4>
+                        <p class="step-instructions">Take the results from Step 2 and multiply your desired GPA by this number<br><br><b>e.g. &nbsp;3.4 * 17 = 57.8</b></p>
+                    </div>
+                </li>
+                <li>
+                    <div class="step-number">4</div>
+                    <div class="instructions">
+                        <h4>Subtract Step 1 from Step 3</h4>
+                        <p class="step-instructions">Take the results from Step 3 and subtract the number you got from Step 1.<br><br><b>e.g. &nbsp;57.8 - 38.4 = 19.4</b></p>
+                    </div>
+                </li>
+                <li>
+                    <div class="step-number">5</div>
+                    <div class="instructions">
+                        <h4>Divide Step 4 by Your Remaining Credits</h4>
+                        <p class="step-instructions">To do this, use the number you got from Step 4 and divide it by your remaining credits.<br><br><b>e.g. &nbsp;19.4 / 5 = 3.9</b></p>
+                    </div>
+                </li>
+                <li>
+                    <div class="step-number">6</div>
+                    <div class="instructions">
+                        <h4>You're All Done</h4>
+                        <p class="step-instructions">Now just make sure you get that grades you need in order to get the GPA you want.</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </body>
+</html>
