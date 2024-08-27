@@ -8,7 +8,7 @@ let finalExamWeightValue = 0
 
 function calculateFinalGradeNeeded(currentGrade, desiredGrade, finalExamWeight) {
     let finalGradeNeeded = (desiredGrade - (100 - finalExamWeight) / 100 * currentGrade) / (finalExamWeight / 100)
-    finalGradeNeeded = Math.round(finalGradeNeeded * 100) / 100
+    finalGradeNeeded = Math.round(finalGradeNeeded)
 
     if (finalGradeNeeded < 0) {
         finalGradeNeeded = 0
