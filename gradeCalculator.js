@@ -63,7 +63,7 @@ function calculateGrade(gradeCount){
         finalGrade = finalGrade * weightMultiplier
     }
 
-    finalGrade = Math.round(finalGrade * 100) / 100
+    finalGrade = Math.round(finalGrade)
 
     finalGradeDisplay.textContent = finalGrade
 
